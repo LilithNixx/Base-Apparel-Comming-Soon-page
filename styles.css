@@ -1,0 +1,258 @@
+:root {
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*NO poner width para que no se active el scroll lateral. Poner width: 100% es lo mismo que no poner nada, es el valor predeterminado*/
+body {
+    min-height: 100vh;
+    width: 100vw;
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*---------------MOBILE----------------*/
+.card-container {
+    width: 375px;
+    min-height: 800px;
+    
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-size: cover;
+    
+}
+
+.logo {
+    width:103px;
+    height: 26px;
+
+    margin: 30px 26px 32px 20px;
+}
+
+.picture {
+    width: 375px;
+    min-height: 252px;
+    
+    margin-bottom: 30px;
+
+    background-image: url(./images/hero-mobile.jpg);
+    background-size: cover;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: var(--Dark-Grayish-Red);
+    text-align: center;
+    letter-spacing: 8px;
+    line-height: 35px;
+
+    padding: 30px;
+}
+
+span {
+    font-weight: 300;
+    color: var(--Desaturated-Red);
+}
+
+.text {
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+
+    color: var(--Desaturated-Red);
+    line-height: 25px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.input {
+    width: 311px;
+    height: 49px;
+
+    display: inline-block;
+
+    margin-left: 32px;
+    margin-right: 32px;
+    border-radius: 20px;
+
+    position: relative;
+}
+
+.email {
+    border-radius: 25px;
+    border: 1px solid var(--Desaturated-Red);
+
+    width: 311px;
+    height: 49px;
+    padding-left: 20px;
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    color: var(--Desaturated-Red);
+}
+
+.email:focus {
+    border: none;
+}
+
+.email:active {
+    border: none;
+}
+
+::placeholder {
+    color: var(--Desaturated-Red);
+}
+
+.error-icon {
+    position: absolute;
+    right: 80px;
+    top: 12px;
+
+    display: none;
+}
+
+.btn-submit {
+    position: absolute;
+    right: -1px;
+    top: -1px;
+
+    width: 65px;
+    height: 49px;
+
+    border-radius: 25px;
+    border: 1px solid var(--Desaturated-Red);
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+.btn-submit:hover {
+    cursor: pointer;
+    background-image: linear-gradient(135deg,hsl(0, 80%, 86%),hsl(0, 100%, 98%));
+    box-shadow: -3px 7px 15px 3px hsl(0, 80%, 86%);
+    border: none;
+}
+
+.error-msg {
+    position: absolute;
+    left: 15px;
+    top: 60px;
+
+    font-size: 0.9em;
+    color: var(--Soft-Red);
+
+    display: none;
+}
+
+.success-msg {
+    position: absolute;
+    left: 15px;
+    top: 60px;
+
+    font-size: 0.9em;
+    color: green;
+
+    display: none;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/*---------------DESKTOP----------------*/
+@media (min-width: 600px){
+   .card-container {
+    width: 1360px;
+    min-height: 609px;
+    position: relative;
+   }
+
+   .picture {
+    width: 456px;
+    min-height: 607px;
+    display: inline-block;
+    position: absolute;
+    left: 66.5%;
+   
+    background-image: url(./images/hero-desktop.jpg);
+    background-size: cover;
+   }
+
+   .logo {
+    margin-left: 130px;
+    margin-top: 61px;
+   }
+
+   h1 {
+    display: inline-block;
+
+    position: absolute;
+    top: 30%;
+    right: 66%;
+
+    width: 340px;
+    height: 160px;
+    
+    text-align: left;
+    font-size: 3em;
+    line-height: 50px;
+    padding: 0;
+   }
+
+   .text {
+    display: inline-block;
+
+    position: absolute;
+    top: 60%;
+    right: 59.5%;
+
+    width: 429px;
+    height: 73px;
+
+    text-align: left;
+    font-size: 1em;
+    padding: 0;
+   }
+
+   .input {
+    position: absolute;
+    top: 80%;
+    right: 57.5%;
+    
+    width: 429px;
+   }
+
+   .email {
+    width: 429px;
+   }
+
+   .btn-submit {
+    position:absolute;
+    top: -1px;
+    right: -1px;
+
+    width: 85px;
+   }
+
+   .error-icon {
+    position: absolute;
+    right: 100px;
+   }
+}
